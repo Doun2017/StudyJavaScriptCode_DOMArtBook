@@ -8,6 +8,7 @@ function showPic(whichpic) {
 }
 
 window.onload = function() {
+  if (!document.getElementById) return false;
   if (!document.getElementsByTagName) return false;
   var lnks = document.getElementsByTagName("a");
   for (var i=0; i<lnks.length; i++) {
