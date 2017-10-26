@@ -6,3 +6,14 @@ function showPic(whichpic) {
   var description = document.getElementById("description");
   description.firstChild.nodeValue = text;
 }
+
+window.onload = function() {
+  if (!document.getElementsByTagName) return false;
+  var lnks = document.getElementsByTagName("a");
+  for (var i=0; i<lnks.length; i++) {
+	  lnks[i].onclick = function() {
+		showPic(this);
+		return false;
+	  }
+  }
+}
